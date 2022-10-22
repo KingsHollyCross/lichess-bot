@@ -10,7 +10,8 @@ RUN python3 -m pip install --no-cache-dir -r requirements.txt > pip.log
 
 RUN wget https://abrok.eu/stockfish/latest/linux/stockfish_x64_bmi2.zip -O stockfish.zip
 RUN unzip stockfish.zip && rm stockfish.zip
-RUN mv stockfish_* engines/stockfish && chmod +x engines/stockfish
+RUN mv stockfish_* engines/stockfish 
+RUN chmod +x engines/stockfish
 
 #Engine name ^^^^^^^^^^^^^^^^^^^
 
